@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Server Showcase</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<div class="top">
+    <h1>Discord Server's</h1>
+</div>
+<div class="server-list">
+    {% for server in servers %}
+    <div class="server">
+        <div class="image-container">
+            <img src="{{ server.image_url }}" alt="Discord Server Banner">
+            <div class="hover-label">Join!</div>
+            <a href="{{ server.invite_link }}" target="_blank"></a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<p><a class="label" href="/add">Add Your Server (Admins Only)</a></p>
+</body>
+</html>
