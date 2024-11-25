@@ -43,5 +43,6 @@ def add_server():
             return "Both image URL and invite link are required!", 400
     return render_template("add_server.html")
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+    # Set the port dynamically from the environment, with a fallback to 5000 for local dev
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))

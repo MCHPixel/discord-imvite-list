@@ -14,9 +14,10 @@
     {% for server in servers %}
     <div class="server">
         <div class="image-container">
-            <img src="{{ server.image_url }}" alt="Discord Server Banner">
-            <div class="hover-label">Join!</div>
-            <a href="{{ server.invite_link }}" target="_blank"></a>
+            <a href="{{ server.invite_link }}" target="_blank">
+                <img src="{{ server.image_url }}" alt="Discord Server Banner">
+                <div class="hover-label">Join!</div>
+            </a>
         </div>
     </div>
     {% endfor %}
